@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import myp2 from "./images/item.png"
 import myp4 from "./images/Calculator.png"
-import myp3 from "./images/watch.png"
 import myp5 from "./images/products.png"
 import myp6 from "./images/hospital.png"
 import my7 from "./images/coffe.png"
@@ -35,7 +34,7 @@ function Projects(){
     
                     </div>
                     <div className="bg-gray-900 border-2 border-white w-[360px] h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                        <img className=" w-[360px] h-[250px]" src={myp3} alt="" />
+                        <img className=" w-[360px] h-[250px]" src={myp4} alt="" />
                         <h1 className="text-3xl font-extralight pt-10">Digital watch Project</h1>
                         <p className="text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
     

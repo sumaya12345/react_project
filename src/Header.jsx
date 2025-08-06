@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import pic1 from "./images/7866f4508301f5b75c26cb328948bbc1.jpg"
 import myp2 from "./images/item.png"
 import myp4 from "./images/Calculator.png"
-import myp3 from "./images/watch.png"
 import myoo from "./images/Maan.jpg"
 
 function Header(){
@@ -60,7 +59,7 @@ function Header(){
 
                 </div>
                 <div className="bg-gray-900 border-2 border-white h-[260px] w-[260px] sm:w-[360px] sm:h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                    <img className=" sm:w-[360px] sm:h-[250px]   " src={myp3} alt="" />
+                    <img className=" sm:w-[360px] sm:h-[250px]   " src={myp2} alt="" />
                     <h1 className="sm:text-3xl font-extralight pt-10">Digital watch Project</h1>
                     <p className="sm:text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
 
