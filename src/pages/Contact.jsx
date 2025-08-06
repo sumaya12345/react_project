@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import sawir from "../images/pexels-steve-30018099.jpg"
+import Footer from "../Footer";
 
 function Contact () {
   return <div className="bg-purple-950 sm:w-full sm:h-[1200px] h-[2000px] relative overflow-hidden">
@@ -85,6 +86,8 @@ function Contact () {
 
         </div>
     </div>
+
+    <Footer/>
     </div>
   
 };
