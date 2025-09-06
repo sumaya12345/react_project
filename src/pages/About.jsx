@@ -1,65 +1,52 @@
 import { Link } from "react-router-dom"
-// import swr3 from "../images/pexels-marek-piwnicki-3907296-8738493.jpg"
-import swr4 from "../images/7866f4508301f5b75c26cb328948bbc1.jpg"
+import swr3 from "../images/7866f4508301f5b75c26cb328948bbc1.jpg"
+import { motion } from "framer-motion"
 import Footer from "../Footer"
 
 
 function About (){
-    return  <div className="overflow-hidden">
-    <div className="bg-purple-950 sm:w-full sm:h-[1200px]  h-[2500px] relative">
+    return  <div>
+<motion.div className=" w-full h-screen bg-cover bg-center" 
+ initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, }}
 
-      {/* <img className="shadow-3xl shadow-black  w-full h-[1000px] " src={swr3} alt="" /> */}
+style={{ backgroundImage: "url('https://images.pexels.com/photos/8738493/pexels-photo-8738493.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200')" }}>
+
         
-     <div className="bg-purple-950 border-2 sm:w-[900px] h-14  border-gray-200 shadow-lg shadow-gray-300 rounded-[70px]  text-white sm:flex sm:justify-between py-3 px-16 sm:ml-80 mt-10 absolute top-20 font-extralight ">
-            <h1 className="text-2xl font-bold text-white">My <span className="text-purple-100">PorTfolio</span></h1>
-            <ul className="sm:flex gap-10 text-2xl hidden">
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/About"><li>About</li></Link>
-                <Link to="/Contact"><li>Contact</li></Link>
+       <div className="pt-20">
+         <div className=" z-0    text-white flex justify-between px-20 items-center ">
+            <h1 className="sm:text-4xl text-4xl font-bold   text-white hover:bg-gradient-to-tr from-red-200 via-black to-purple-200 rounded-lg py-1 px-8 sm:mb-10 mb-0 hover:scale-105 transition-all duration-500 cursor-pointer">My <span className="text-yellow-500">PorTfolio</span></h1>
+            <ul className="sm:flex gap-10 text-2xl font-extrabold hidden text-white">
+                <Link to="/"><li className="hover:bg-gradient-to-tr from-red-500 via-black to-purple-500 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">Home</li></Link>
+                <Link to="/About"><li className="hover:bg-gradient-to-tr from-red-500 via-black to-purple-500 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">About</li></Link>
+                <Link to="/Contact"><li className="hover:bg-gradient-to-tr from-red-500 via-black to-purple-500 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">Contact</li></Link>
             </ul>
         </div>
-    <div className="sm:flex sm:justify-around gap-20 px-20 py-20 font-extralight text-2xl absolute top-72 text-white">
-        <div>
-        <img className="rounded-full w-[400px] h-96 border-2 border-blue-950 shadow-lg shadow-blue-300 " src={swr4} alt="" />
+
             
-        </div>
-                <div className="pt-20 sm:pt-0">
-                    <h1 className="text-5xl font-bold text-white ">About me</h1>
-        <p className="pt-10"> Hello! I'm Sumaya Abdi Ali a passionate front-end developer dedicated to creating <br />
-          beautiful, responsive, and user-friendly websites. My expertise lies in combining <br /> 
-          modern design principles with clean, efficient code to bring ideas to life on the web <br />
-          Whether it's building personal portfolios, e-commerce platforms, or business websites <br />
-          I strive to deliver high-quality solutions that exceed expectations.</p>
-            <button className=" hover:shadow-2xl transition duration-300 bg-transparent py-3 px-14 rounded-3xl mt-10 border-2 border-white shadow-lg shadow-black font-bold text-[20px] ">Contact</button>
-                </div>
+            <div className="sm:flex justify-center gap-20  text-white items-center mt-10 overflow-hidden    ">
+                        
+                        <div className=" sm:text-2xl ml-7 mt-10 sm:mt-0 sm:ml-0 animate-slideLeft overflow-hidden">
+                            <h1 className="text-5xl  font-bold  sm:text-purple-400 ">About me</h1>
+                    <p className="pt-10 text-[15px]"> Hello! I'm Sumaya Abdi Ali a passionate front-end developer <br /> dedicated  to creating
+                      beautiful, responsive, and user-friendly websites. <br /> My expertise lies in combining 
+                      modern design principles with clean, <br /> efficient code to bring ideas to life on the web
+                      Whether it's building  <br />personal portfolios, e-commerce platforms, or business websites
+                      </p>
+         <button className="bg-gradient-to-tr from-red-950 via-red-950 to-white hover:bg-purple-900   rounded-full py-1 px-1 sm:mt-4 hover:scale-105 transition-all duration-500 cursor-pointer ml-10">
+                        <div className="bg-black py-2 px-10 rounded-full">
+                            <p className="text-white text-xl">contact</p></div> </button>     
+                        </div>
+                        <div className="animate-slideRight overflow-hidden sm:mt-0 mt-10 mb-20 s:mb-0">
+                            <img className="rounded-full sm:w-[300px] sm:h-80 w-[300px] h-[250px] border-2 border-blue-950 shadow-lg shadow-blue-300 " src={swr3} alt="" />
+                        </div>
+             
+                    </div>
 
-            </div>
-
-            <div className="text-5xl text-center text-white font-bold absolute sm:top-[800px] top-[1790px] left-[600px]">
-                <h1>My courses </h1>
-            </div>
-
-            <div className="sm:flex justify-center gap-10 absolute top-[900px] left-96">
-  <div className="sm:flex gap-10 sm:justify-center text-white">
-    <div className="bg-gray-900 rounded-lg p-6 text-center shadow-md hover:bg-purple-700 transition duration-300">
-      <p className="text-xl font-semibold">HTML</p>
-    </div>
-    <div className="bg-gray-900 rounded-lg p-6 text-center shadow-md hover:bg-purple-700 transition duration-300">
-      <p className="text-xl font-semibold">CSS</p>
-    </div>
-    <div className="bg-gray-900 rounded-lg p-6 text-center shadow-md hover:bg-purple-700 transition duration-300">
-      <p className="text-xl font-semibold">JavaScript</p>
-    </div>
-    <div className="bg-gray-900 rounded-lg p-6 text-center shadow-md hover:bg-purple-700 transition duration-300">
-      <p className="text-xl font-semibold">React</p>
-    </div>
-  </div>
-</div>
-      
-
-
-
-            </div>
+       </div>
+                 
+              </motion.div>
 
             <Footer/>
 

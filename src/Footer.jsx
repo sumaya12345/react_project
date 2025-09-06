@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function Footer(){
-    return <div className="sm:flex sm:justify-around gap-20 sm:w-full sm:pl-0 pl-10  text-white bg-black sm:h-[300px] h-[800px] pt-10 text-2xl absolute">
+    return <div className="sm:flex sm:justify-around gap-20 sm:w-full sm:pl-0 pl-10  text-white bg-gradient-to-tr from-red-950 via-purple-950 to-black bg-purple-900 sm:h-[300px] h-[800px] pt-10 text-2xl absolute">
         <div className=" sm:pt-0  pt-10">
             <h3 className="text-3xl pb-2 font-bold">Quick Links</h3>
 

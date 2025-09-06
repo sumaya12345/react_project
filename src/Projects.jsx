@@ -1,68 +1,92 @@
 import { Link } from "react-router-dom"
 import myp2 from "./images/item.png"
-import myp4 from "./images/Calculator.png"
-import myp5 from "./images/products.png"
-import myp6 from "./images/hospital.png"
-import my7 from "./images/coffe.png"
+import Footer from "./Footer"
+import { useEffect, useState } from "react"
+import axios from "axios"
+import { motion } from "framer-motion"
+
+// import myp4 from "./images/Calculator.png"
+// import myp5 from "./images/products.png"
+// import myp6 from "./images/hospital.png"
+// import my7 from "./images/coffe.png"
+
+
 
 function Projects(){
-    return  <div className="bg-slate-800 w-full sm:h-[1400px] h-[4200px] relative overflow-hidden">
- <div className="bg-purple-950 border-2 sm:w-[900px] h-14  border-gray-200 shadow-lg shadow-gray-300 rounded-[70px]  text-white flex justify-between py-3 px-16 sm:ml-80 ml-8 mt-10 absolute top-20 font-extralight ">
-            <h1 className="text-2xl font-bold text-white">My <span className="text-purple-100">PorTfolio</span></h1>
-            <ul className="sm:flex gap-10 text-2xl hidden">
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/About"><li>About</li></Link>
-                <Link to="/Contact"><li>Contact</li></Link>
+
+     const [projectData , setprojectData] = useState([])
+
+  const handleReadData = ()=>{
+    axios.get("http://localhost:9000/read/project").then((res)=>{{
+      setprojectData(res.data)
+
+    }})
+  }
+
+  useEffect(()=>{
+    handleReadData()
+  },[])
+
+
+   const handleDelete = (id)=>{
+      axios.delete(`http://localhost:9000/delete/project/${id}`).then(()=>{
+        alert("success delete")
+    setprojectData(prevData => prevData.filter(item => item._id !== id));
+
+      }).catch(err => console.log(err));
+    }
+    return <div>
+<motion.div className=" w-full h-screen bg-cover bg-center" 
+ initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, }}
+
+style={{ backgroundImage: "url('https://images.hdqwalls.com/download/mountain-range-abstract-b9-2932x2932.jpg')" }}>
+
+        
+       <div className="pt-20">
+         <div className=" z-0    text-white flex justify-between px-20 items-center ">
+            <h1 className="sm:text-4xl font-bold   text-white hover:bg-gradient-to-tr from-red-950 via-black to-purple-950 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">My <span className="text-yellow-500">PorTfolio</span></h1>
+            <ul className="sm:flex gap-10 text-2xl font-extrabold hidden text-white">
+                <Link to="/"><li className="hover:bg-gradient-to-tr from-red-950 via-black to-purple-950 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">Home</li></Link>
+                <Link to="/About"><li className="hover:bg-gradient-to-tr from-red-950 via-black to-purple-950 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">About</li></Link>
+                <Link to="/Contact"><li className="hover:bg-gradient-to-tr from-red-950 via-black to-purple-950 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">Contact</li></Link>
             </ul>
         </div>
 
-    <div className="text-center text-white absolute top-52 sm:left-48">
+       </div>
+                  <div className="text-center text-white mb-20 sm:ml-10 mt-20">
                 <h1 className="text-5xl font-bold text-white">My Projects</h1>
     
-                <div className="sm:grid sm:grid-cols-3 justify-center ml-6 gap-10 mt-10">
-                    <div className="bg-gray-900 border-2 border-white w-[360px] h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                        <img className=" w-[360px] h-[250px]" src={myp2} alt="" />
-    
-                        <h1 className="text-3xl font-extralight pt-10">Sale items Project</h1>
-                        <p className="text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
-    
-                    </div>
-                    <div className="bg-gray-900 border-2 border-white w-[360px] h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                        <img className=" w-[360px] h-[250px]" src={myp4} alt="" />
-                        <h1 className="text-3xl font-extralight pt-10">Calculator Project</h1>
-                        <p className="text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
-    
-                    </div>
-                    <div className="bg-gray-900 border-2 border-white w-[360px] h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                        <img className=" w-[360px] h-[250px]" src={myp4} alt="" />
-                        <h1 className="text-3xl font-extralight pt-10">Digital watch Project</h1>
-                        <p className="text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
-    
-                    </div>
-                    <div className="bg-gray-900 border-2 border-white w-[360px] h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                        <img className=" w-[360px] h-[300px]" src={myp5} alt="" />
-                        <h1 className="text-3xl font-extralight pt-10">Digital watch Project</h1>
-                        <p className="text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
-    
-                    </div>
-                    <div className="bg-gray-900 border-2 border-white w-[360px] h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                        <img className=" w-[360px] h-[300px]" src={myp6} alt="" />
-                        <h1 className="text-3xl font-extralight pt-10">Digital watch Project</h1>
-                        <p className="text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
-    
-                    </div>
-                    <div className="bg-gray-900 border-2 border-white w-[360px] h-[500px] shadow-lg shadow-gray-300 rounded-lg">
-                        <img className=" w-[360px] h-[300px]" src={my7} alt="" />
-                        <h1 className="text-3xl font-extralight pt-10">Digital watch Project</h1>
-                        <p className="text-2xl font-bold pt-4">Lorem ipsum dolor sit amet adipisicing elit.</p>
-    
-                    </div>
-                </div>
+                <div className="sm:grid sm:grid-cols-2 mr-52">
+            {projectData.map((item , index)=>{
+          return <div key={index} className="w-80 border-2 h-96 border-gray-600 p-4 sm:mx-40 ml-10 my-20">
+ <img className="w-72 h-60 rounded-lg" src={`http://localhost:9000/allimages/${item.pImage}`} alt={item.title} />
+
+
+          <h1 className="text-4xl font-semibold py-3">{item.title}</h1>
+          <p className="text-white">{item.description}</p>
+
+          <div className="flex justify-around text-2xl">
+            <i onClick={()=> handleDelete(item._id)} class="fa-solid fa-trash mt-3 text-purple-700"></i>
+          </div>
+        </div>
+         
+              })
+
+            }
+            </div>
     
                 <Link to="/Projects"><a href="Projects">View All</a></Link>
     
-            </div>
-<div className="sm:flex sm:justify-around gap-20 w-full sm:pl-0 pl-10  text-white bg-black sm:h-[300px] h-[900px]  pt-10 text-2xl absolute sm:top-[1100px] top-[3300px] left-23">
+   
+
+
+    </div>
+              </motion.div>
+
+       
+<div className="sm:flex sm:justify-around gap-20 sm:w-full sm:pl-0 pl-10  text-white bg-gradient-to-tr from-black via-purple-950 to-black bg-purple-900 sm:h-[300px] h-[800px] pt-10 text-2xl absolute sm:top-[1500px] top-[900px]">
         <div className=" sm:pt-0  pt-10">
             <h3 className="text-3xl pb-2 font-bold">Quick Links</h3>
 
@@ -93,6 +117,10 @@ function Projects(){
 
         </div>
     </div>
+     
+
+
+
 
 
                 </div>

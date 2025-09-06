@@ -4,6 +4,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Projects from "./Projects"
 import Seminars from "./Siminars"
+import ContactsPage from "./pages/contactstore"
 
 
 
@@ -14,6 +15,7 @@ function App(){
   <Route path="/Contact" element={<Contact/>}/>
   <Route path="/Projects" element={<Projects/>}/>
   <Route path="/Seminars" element={<Seminars/>}/>
+  <Route path="/ContactsPage" element={<ContactsPage/>}/>
   </Routes>
 }
 
