@@ -59,16 +59,16 @@ style={{ backgroundImage: `url(${sawir})` }}>
                  <div className="text-center sm:text-6xl  text-white pt-10 absolute inset-0 top-40 bg-black/20">
                     <motion.h1 className="font-extrabold sm:text-6xl text-5xl "
                     initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}>CONTACT ME
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}>CONTACT ME
                     </motion.h1>
                     <motion.h1 className="font-bold pt-6 sm:text-2xl text-1xl"
                      initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1,  }}>WE'DE LOVE TO HEAR WHAT YOU THINK </motion.h1>
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 1,  }}>WE'DE LOVE TO HEAR WHAT YOU THINK </motion.h1>
                     
    
- <button className="bg-gradient-to-tr from-white via-black to-purple-950 hover:bg-purple-900  rounded-full py-1 px-3 mt-4 hover:scale-105 transition-all duration-500 cursor-pointer sm:ml-10 ml-0">
+               <button className="bg-gradient-to-tr from-white via-black to-purple-950 hover:bg-purple-900  rounded-full py-1 px-3 mt-4 hover:scale-105 transition-all duration-500 cursor-pointer sm:ml-10 ml-0">
                 <div className="text-black bg-gradient-to-tr  from-white via-white to-purple-950 py-2 px-6 rounded-full">
                     <p className="text-balck font-bold text-xl">Hire me</p></div> </button>                 </div>
               </motion.div>

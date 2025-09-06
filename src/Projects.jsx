@@ -36,7 +36,7 @@ function Projects(){
       }).catch(err => console.log(err));
     }
     return <div>
-<motion.div className=" w-full h-screen bg-cover bg-center" 
+<motion.div className=" w-full h-[840px] bg-cover bg-center" 
  initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, }}
@@ -44,7 +44,7 @@ function Projects(){
 style={{ backgroundImage: "url('https://images.hdqwalls.com/download/mountain-range-abstract-b9-2932x2932.jpg')" }}>
 
         
-       <div className="pt-20">
+       <div className="pt-10">
          <div className=" z-0    text-white flex justify-between px-20 items-center ">
             <h1 className="sm:text-4xl font-bold   text-white hover:bg-gradient-to-tr from-red-950 via-black to-purple-950 rounded-lg py-1 px-8 mb-10 hover:scale-105 transition-all duration-500 cursor-pointer">My <span className="text-yellow-500">PorTfolio</span></h1>
             <ul className="sm:flex gap-10 text-2xl font-extrabold hidden text-white">
@@ -86,7 +86,7 @@ style={{ backgroundImage: "url('https://images.hdqwalls.com/download/mountain-ra
               </motion.div>
 
        
-<div className="sm:flex sm:justify-around gap-20 sm:w-full sm:pl-0 pl-10  text-white bg-gradient-to-tr from-black via-purple-950 to-black bg-purple-900 sm:h-[300px] h-[800px] pt-10 text-2xl absolute sm:top-[1500px] top-[900px]">
+<div className="sm:flex sm:justify-around gap-20 sm:w-full sm:pl-0 pl-10  text-white bg-gradient-to-tr from-black via-purple-950 to-black bg-purple-900 sm:h-[300px] h-[800px] pt-10 text-2xl absolute sm:top-[900px] top-[900px]">
         <div className=" sm:pt-0  pt-10">
             <h3 className="text-3xl pb-2 font-bold">Quick Links</h3>
 

@@ -144,11 +144,9 @@ style={{ backgroundImage: "url('https://images.hdqwalls.com/download/mountain-ra
       <p className="text-xl font-semibold">Express</p>
     </div>
     <div className="bg-transparent border-2 border-gray-600 hover:bg-gradient-to-tr from-red-950 via-purple-950 to-white hover:bg-purple-900  rounded-lg p-6 text-center shadow-lg  transition duration-300 hover:animate-rotateYHover">
-      <p className="text-xl font-semibold">Mongodb</p>
+      <p className="text-xl font-semibold"> database Mongodb</p>
     </div>
-    <div className="bg-transparent border-2 border-gray-600 hover:bg-gradient-to-tr from-red-950 via-purple-950 to-white hover:bg-purple-900 rounded-lg p-6 text-center shadow-lg  transition duration-300 hover:animate-rotateYHover">
-      <p className="text-xl font-semibold">database</p>
-    </div>
+   
   </div>
 
            </div>
